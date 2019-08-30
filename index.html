@@ -1,0 +1,568 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Galicia</title><style>
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	text-indent: -1.7em;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	opacity: 0.5;
+}
+
+.sans { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif; }
+.mono { font-family: Nitti, 'Microsoft YaHei', '微软雅黑', monospace; }
+.pdf .sans { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .code { font-family: Source Code Pro, 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, KaiTi, STKaiTi, '华文楷体', KaiTi_GB2312, '楷体_GB2312', serif, 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC', 'Noto Sans CJK KR'; }
+
+.pdf .mono { font-family: PT Mono, Nitti, 'Microsoft YaHei', '微软雅黑', monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC', 'Noto Sans Mono CJK KR'; }
+
+.highlight-default {
+}
+.highlight-gray {
+	color: rgb(155,154,151);
+}
+.highlight-brown {
+	color: rgb(100,71,58);
+}
+.highlight-orange {
+	color: rgb(217,115,13);
+}
+.highlight-yellow {
+	color: rgb(223,171,1);
+}
+.highlight-teal {
+	color: rgb(15,123,108);
+}
+.highlight-blue {
+	color: rgb(11,110,153);
+}
+.highlight-purple {
+	color: rgb(105,64,165);
+}
+.highlight-pink {
+	color: rgb(173,26,114);
+}
+.highlight-red {
+	color: rgb(224,62,62);
+}
+.highlight-gray_background {
+	background: rgb(235,236,237);
+}
+.highlight-brown_background {
+	background: rgb(233,229,227);
+}
+.highlight-orange_background {
+	background: rgb(250,235,221);
+}
+.highlight-yellow_background {
+	background: rgb(251,243,219);
+}
+.highlight-teal_background {
+	background: rgb(221,237,234);
+}
+.highlight-blue_background {
+	background: rgb(221,235,241);
+}
+.highlight-purple_background {
+	background: rgb(234,228,242);
+}
+.highlight-pink_background {
+	background: rgb(244,223,235);
+}
+.highlight-red_background {
+	background: rgb(251,228,228);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(55, 53, 47, 0.6);
+	fill: rgba(55, 53, 47, 0.6);
+}
+.block-color-brown {
+	color: rgb(100,71,58);
+	fill: rgb(100,71,58);
+}
+.block-color-orange {
+	color: rgb(217,115,13);
+	fill: rgb(217,115,13);
+}
+.block-color-yellow {
+	color: rgb(223,171,1);
+	fill: rgb(223,171,1);
+}
+.block-color-teal {
+	color: rgb(15,123,108);
+	fill: rgb(15,123,108);
+}
+.block-color-blue {
+	color: rgb(11,110,153);
+	fill: rgb(11,110,153);
+}
+.block-color-purple {
+	color: rgb(105,64,165);
+	fill: rgb(105,64,165);
+}
+.block-color-pink {
+	color: rgb(173,26,114);
+	fill: rgb(173,26,114);
+}
+.block-color-red {
+	color: rgb(224,62,62);
+	fill: rgb(224,62,62);
+}
+.block-color-gray_background {
+	background: rgb(235,236,237);
+}
+.block-color-brown_background {
+	background: rgb(233,229,227);
+}
+.block-color-orange_background {
+	background: rgb(250,235,221);
+}
+.block-color-yellow_background {
+	background: rgb(251,243,219);
+}
+.block-color-teal_background {
+	background: rgb(221,237,234);
+}
+.block-color-blue_background {
+	background: rgb(221,235,241);
+}
+.block-color-purple_background {
+	background: rgb(234,228,242);
+}
+.block-color-pink_background {
+	background: rgb(244,223,235);
+}
+.block-color-red_background {
+	background: rgb(251,228,228);
+}
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="318896bf-994d-493d-afbf-2f2d13453739" class="page sans"><header><img class="page-cover-image" src="Galicia/atomic-gala.png" style="object-position:center 23.9%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">🏦</span></div><h1 class="page-title">Galicia</h1></header><div class="page-body"><h1 id="7f22ea7d-58df-4c44-ad8c-4f0f3b10602b" class=""><strong>Problemática</strong></h1><figure class="block-color-orange_background callout" style="white-space:pre-wrap;display:flex" id="bf758564-2701-43ab-997a-e4e502f5a179"><div style="font-size:1.5em"><span class="icon">💡</span></div><div style="width:100%">El banco reconoció que tiene productos que fueron creados en diferentes momentos por diferentes agencias y empresas sub contratadas, lo cual generó que no haya consistencia en la experiencia del cliente a nivel visual o funcional. El objetivo es hacer un Sistema de Diseño que permita disponibilizar a todos los componentes fundacionales y de interacción en una librería de componentes para diseñadores y desarrolladores.</div></figure><h1 id="18ff272c-085c-4b3b-a4e2-70137e8396a2" class=""><strong>Desafío</strong></h1><ol id="8c021d85-0411-4579-9d6a-c1aca51063bd" class="numbered-list" start="1"><li><mark class="highlight-orange"><strong>¿Qué necesitarías para desarrollar el sistema de diseño?</strong></mark><p id="4c8680c4-87e0-40fb-aa7f-8119e6a070c1" class="">Para empezar, adaptar una metodología <em>evolutiva</em> como es <strong>Atomic Design.</strong> Utilizaría un equipo in-house para poder definir desde los elementos más pequeños (átomos) como botones, links, inputs, títulos; hasta los más complejos (moléculas y organismos) como podrían ser una card o un formulario. Para que más adelante los equipos de producción puedan desarrollar templates y concluir en el diseño final.</p></li></ol><ol id="fca1d1f5-a324-424f-9e4b-39d8931a1375" class="numbered-list" start="2"><li><mark class="highlight-orange"><strong>¿Qué etapas reconoces para construirlo? </strong></mark><p id="d321b603-d34a-48b3-a8a2-4a1819aae717" class=""><mark class="highlight-orange"><strong>¿Qué actividades involucra cada etapa y qué objetivo tienen?</strong></mark></p><ul id="4e529576-bb36-4616-a36f-231b9e3864d7" class="toggle"><li><details open=""><summary>Lo dividiría en 6 etapas:</summary><ol id="c6cb3d7e-f80b-49d9-bc67-611207953bd8" class="numbered-list" start="1"><li><strong>Investigación y análisis</strong> → 4 semanas <em>(2 sprints) </em>[UX]</li></ol><ol id="3597d036-a552-4f60-8888-08a40206178f" class="numbered-list" start="2"><li><strong>Desarrollo visual e interactivo de átomos</strong> → 6 semanas <em>(3 sprints)</em> [UI/UX]</li></ol><ol id="7e654f46-93be-4b8c-a14a-e35e8ad3ffb8" class="numbered-list" start="3"><li><strong>Desarrollo estructural de moléculas y organismos</strong> → 4 semanas <em>(2 sprints) </em>[UI]</li></ol><ol id="5a8476fc-85ff-4b4b-b000-f3d9b478077f" class="numbered-list" start="4"><li><strong>Testeos, enfoque holístico y posibles iteraciones </strong>→ 4 semanas <em>(2 sprints) </em>[UX]</li></ol><ol id="31a2a68a-b794-4532-9347-80fbbe7ddab7" class="numbered-list" start="5"><li><strong>Correcciones y consistencia visual y estructural</strong> → 2 semanas<em> (1 sprints) </em>[UI]</li></ol><ol id="39804956-99fd-4ab9-96ed-a943599f6494" class="numbered-list" start="6"><li><strong>Preparación de Assets para desarrollo </strong>→ 2 semanas <em>(1 sprint) </em>[UI/DEV]</li></ol><ol id="bbe50844-a247-4cb3-a848-eb0a728e5d88" class="numbered-list" start="7"><li><strong>Desarrollo de una Plataforma web </strong>→ 8 semanas <em>(4 sprints) </em>[DEV]</li></ol></details></li></ul><h2 id="d3967d51-4048-4914-a68a-b1d9061becb6" class="">Investigación y Análisis <em>[2 sprints]</em></h2><p id="53aa4aa3-1868-4327-9087-a9dfb84fc574" class="">En primera instancia buscaría evaluar los elementos desarrollador por las agencias y empresas sub contratadas, si estos productos ya están en producción trabajaría junto con un analista de datos y buscaría descubrir cuales son los patrones de diseños que tienen más porcentaje de éxito, así como también evaluar con el equipo UX los elementos que nunca fueron creados y pueden ser necesarios para mejorar la experiencia del usuario; haciendo research, benchmarks y análisis de producto. </p><p id="563fcfba-b2ca-42f0-8f10-ca3d8641df50" class="">Se llevará a cabo unas sesiones de <em>discovery</em> contemplando un enfoque holistico para tener en cuenta diferentes miradas y <em>expertises</em> a la hora de desarrollar el producto.</p><p id="22576fb4-bce4-4921-b235-3cdc73c33033" class="">Sobre ello trabajaría colaborativamente con un equipo de Diseñadores UX/UI para poder organizar todos los assets pre existentes y determinar (seguramente en un Canvas) los elementos en el inventario actual <em>(determinados por el % de finalización)</em>:</p><figure id="9d8b73bb-f7bf-47dd-b124-049e254ed17a" class="image"><a href="https://images.unsplash.com/photo-1541960071727-c531398e7494?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"><img src="https://images.unsplash.com/photo-1541960071727-c531398e7494?ixlib=rb-1.2.1&amp;q=85&amp;fm=jpg&amp;crop=entropy&amp;cs=srgb"/></a><figcaption>Canvas físico o en alguna herramienta como Trello, Jira, Asana, etc.</figcaption></figure><ul id="d82fa59e-47ca-419b-856b-d2b9607ab2fc" class="bulleted-list"><li>Quedan como están (100%)</li></ul><ul id="7328ce18-527d-4fe1-a1b1-75535704d2d1" class="bulleted-list"><li>Necesitan ajustes mínimos (80%)</li></ul><ul id="e268a73b-5c74-4b6d-be82-97bcbe9a238d" class="bulleted-list"><li>Necesitan trabajo visual (60%)</li></ul><ul id="f0f4f8b9-09af-4abc-9afd-ccc3d2ad0a1c" class="bulleted-list"><li>Necesitan trabajo estructural (40%)</li></ul><ul id="bcd424d9-b4b2-4360-8151-3e905bcc9b20" class="bulleted-list"><li>No existen y hay que hacerlos / existen y hay que rehacerlos (20%)</li></ul><ul id="043f793a-b26f-4942-9947-0d865f79fadc" class="bulleted-list"><li>(<em>0% sería que los necesitamos y todavía no lo sabemos)</em></li></ul><p id="efa217a1-1cd8-44c7-a0d9-f6cb80f08724" class="">Siguiendo el camino lógico, determinaría el tono y la voz de la comunicación en base al diseño y a los detalles; como por ejemplo el copy en los botones o los mensajes de alerta. Por otro lado, el lenguaje visual y fotográfico, por ejemplo, imágenes de buena calidad de familias jóvenes felices con un overlay naranja.</p><p id="5065a408-7821-4877-89f9-d19e71ff3fce" class="">Es importante en esta parte documentar todo el proceso y los pasos que se dieron, para poder determinar si en un futuro tienen que existir cambios sobre la base y si estos están justificados y/o testeados correctamente.</p><p id="729ccf82-66d5-4f00-b3d7-a1c7014e3c56" class="">Así mismo haría una evaluación y análisis secundario de parte del equipo de desarrollo (no necesariamente todo el equipo, con un líder técnico y 2 desarrolladores sería suficiente) para contemplar el tiempo de desarrollo que podría llevar hacer una plataforma web que pueda incluir todos los elementos del sistema, desde los átomos hasta los organismos, para que en un futuro los diseñadores y desarrolladores trabajen en producción puedan acceder y descargar los <em>assets</em> necesarios hacer sus propios <em>templates</em> en base al producto correspondiente. Los cambios de la plataforma podrían ser <em>deployados</em> y <em>shippeados</em> una vez finalizado el sprint del equipo Sistema de diseño quienes actualizarán la documentación del mismo para informar a los equipos de producción los cambios que se realizaron en el ultimo <em>release</em>.</p><h2 id="19259476-598b-4da1-b1da-3b7a63cc3ba3" class="">Desarrollo visual e interactivo de Atomos <em>[4 sprints]</em></h2><p id="74e33f11-1aca-4fd8-add9-f6b5d4412c88" class="">Una vez terminada la primera parte y considerando que <em>&quot;Nunca hay tiempo para desarrollar el sistema de diseño&quot;</em> y obviamente no se puede parar la producción para ello, trabajaría en alguna herramienta colaborativa como <em><strong>Sketch teams</strong></em> o <em><strong>Figma</strong></em> para acelerar la velocidad de trabajo y el feedback entre el equipo. Herramientas como estas permiten el desarrollo de un archivo maestro (Librería de símbolos en Sketch, componentes maestros de Figma) que contenga todos los <em>assets</em> y puedan ser compartidos con los equipos de diseño de producción.</p><p id="be9428ab-1f3d-488a-a817-e4ec4f3bf83e" class="">De esta forma, los equipos encargados de seguir trabajando podrían utilizar los <em>assets</em> de este archivo maestro y así poder trabajar en sus tareas sin que el equipo del sistema de diseño tenga que inferir en ello. Así, por ejemplo, al trabajar sobre el archivo maestro, cuando se cambien los botones de rojo a naranja porque <em>convierten mejor</em>, automáticamente se cambiarán todos los botones usados en los diseños de producción.</p><p id="377d43a3-b56f-4de9-ad2e-9270f34388fd" class="">Para comenzar el proceso del diseño en si, utilizaría una grilla universal para medir los componentes en unidades estándares para todos.</p><figure id="28a91944-8bc6-4fa5-85b0-48efc96e280a" class="image"><a href="https://github.com/heyfede/img/blob/master/btn-grid-gali.gif?raw=true"><img src="https://github.com/heyfede/img/blob/master/btn-grid-gali.gif?raw=true"/></a><figcaption>Ejemplo → grillas de 12px: Un botón es de 10x3, es decir 120x36px</figcaption></figure><p id="723172df-cbd0-40d3-96f2-e7467b94bdd7" class="">A lo largo del proceso se agregará la interactividad de los átomos (como <em>spinners</em>, estados de botones y transiciones, iconos e ilustraciones) así como los colores e interacciones, satisfactorias o erróneas.</p><h2 id="3ca0b4fa-4822-4246-9e94-d2740781de25" class="">Desarrollo estructural de Moléculas y Organismos <em>[2 sprints]</em></h2><p id="24e42d57-25f6-42a2-9da8-9c9baf8eaf0f" class="">Una vez finalizados todos los átomos del sistema, trabajaría con lo investigado en la primera etapa sobre los posibles escenarios en los que deberían ser usados elementos más complejos, como por ejemplo, formularios en pantallas de registro, cards en detalles de la cuenta, mensajes de error o éxito a lo largo de todo el <em>user-journey</em>, <em>empty state</em>s, entre otros.</p><blockquote id="b87cb69a-3449-4621-84e3-a3a783fa7ab5" class="">Es fundamental en esta etapa estar atento a unificar los <strong>patrones de diseños,</strong> buscando lograr una coherencia a lo largo de todo el sistema visual.</blockquote><p id="6fc060e5-d66e-47ea-8b28-00c87057600f" class="">Al final de esta etapa se realizarán las pruebas de Moléculas generando organismos más complejos, por ejemplo: un <strong><em>Checkout</em></strong>, donde existen elementos como: </p><ul id="5597ce62-ea8b-4ac6-b641-8688d00201e7" class="bulleted-list"><li>Selectores de medios de pagos</li></ul><ul id="2efb7309-8165-4729-a9fb-89a04cf475ab" class="bulleted-list"><li>Steppers que te indiquen el camino recorrido y el estado actual</li></ul><ul id="faa146c3-5c2e-4dbe-b72a-a302712eb790" class="bulleted-list"><li>Formularios</li></ul><ul id="b4136e0d-169d-41c9-99b9-88323e8c0995" class="bulleted-list"><li>Cards</li></ul><p id="ec9061c3-0648-407d-8dc0-d958627328e1" class="">O, una pantalla del estado de la tarjeta de crédito, que mostraría:</p><ul id="886c7929-f385-411d-b37a-edd0abcbbd76" class="bulleted-list"><li>El estado actual de tu tarjeta</li></ul><ul id="7df6de6e-598f-4fd2-9d94-ae12813adcc8" class="bulleted-list"><li>Los movimientos del mes</li></ul><ul id="0ada3c28-b4c7-41b9-9a52-060455298f43" class="bulleted-list"><li>El vencimiento </li></ul><p id="a927c2e8-6594-44d4-848f-60e827fc7a0c" class="">Y tendría múltiples acciones como:<div class="indented"><ul id="d0f887ec-056d-4d8a-a730-004265cf764b" class="bulleted-list"><li>Pagar</li></ul><ul id="2ad8faff-d6d2-4566-a9e8-c2401709612f" class="bulleted-list"><li>Descargar resumen</li></ul><ul id="8513f5fb-1132-49d6-b7b2-84eb1d7ba9bf" class="bulleted-list"><li>Exportar en .xls</li></ul><ul id="185bde19-4145-418a-8f71-c24c09611340" class="bulleted-list"><li>etc. </li></ul></div></p><h2 id="39267eff-2079-4ee2-b67a-ce496db37e2f" class=""><strong>Testeos, enfoque holístico y posibles iteraciones</strong></h2><p id="1e77e12b-2a48-406c-9c2b-b62d40c6cdc7" class="">Una vez finalizado el gran flujo principal de trabajo visual, se organizarán diferentes tests con usuarios finales externos de este sistema, es decir, los clientes:</p><ul id="38ad4dec-4847-4f53-a9ed-d3e0d2856468" class="bulleted-list"><li>5 de banca minorista</li></ul><ul id="a5f28a4c-c1b9-445d-bb70-ea17c7e52607" class="bulleted-list"><li>5 de banca mayorista</li></ul><ul id="7bd45866-750f-4a8a-acc9-39d3092452e3" class="bulleted-list"><li>5 de grandes empresas</li></ul><ul id="d361ed84-6016-4915-ac78-c2ae41ce1071" class="bulleted-list"><li>5 inversionistas</li></ul><p id="cb7e4595-446d-4b0b-b83e-60c3678abb6c" class="">Para realizar estos testeos, se armarán prototipos interactivos en alguna herramienta como <a href="https://www.invisionapp.com"><strong>Invision</strong></a><strong> </strong>(recomiendo ésta sobre el prototipado de Figma o Sketch, por la posibilidad de descargar el prototipo y no depender de una conexión a internet o de una Mac)<strong> </strong>contemplando múltiples<em> userflows</em> y los <em>Happy paths </em>que se encontrarán en el mismo. Se diseñarán cuestionarios personalizados para cada tipo de usuario, contemplando que la tarea asignada sea relevante para el mismo (Testear el pago de sueldos de 2000 empleados en banca minorista, no tendría sentido)</p><p id="f77a04bf-00e0-4537-9901-97862ce93e20" class="">Por otra parte, en esta etapa sumaría valor organizar entrevistas y testeos con usuarios internos al banco dentro de distintas areas, como:</p><ul id="3e70267a-e4a8-4be8-8d53-add754135f0b" class="bulleted-list"><li>Marketing</li></ul><ul id="d535ae0d-65d6-4773-85d0-b961da86cf76" class="bulleted-list"><li>Recursos humanos</li></ul><ul id="a4945c7d-af60-4db8-827c-885c6fa99cfb" class="bulleted-list"><li>Fianzas</li></ul><ul id="0d8e1467-b69b-43d5-9121-7d8936c8e8e3" class="bulleted-list"><li>Atención al cliente</li></ul><ul id="46ae5f5e-dfc4-49da-883c-989eff783119" class="bulleted-list"><li>Desarrolla</li></ul><ul id="ce76cce8-2409-49e6-8f17-6ae31ade073a" class="bulleted-list"><li>Entre otros</li></ul><blockquote id="ca4873aa-3702-4a8d-b9d9-9e9f05031340" class="">Una vez finalizados los testeos es sumamente importante documentar los resultados e iterar en el diseño, inclusive en los átomos en caso de ser necesario, este proceso puede ser repetido en base al feedback. </blockquote><h2 id="74d639d4-6409-47f7-af57-ca7b25445ea2" class=""><strong>Correcciones, consistencia visual y estructural </strong><em><strong>[1 sprint]</strong></em></h2><p id="236199f9-7806-476b-962a-cdb0732e2cb6" class="">Lo restante para el siguiente sprint será corregir los pequeños errores que pudieron suceder a lo largo del camino y posiblemente han sido arrastrados a lo largo de proceso. 
+Ejemplo → Correcciones de pixeles: </p><ul id="b7fa76b5-8765-43a3-8ad6-9927ef46c1a6" class="bulleted-list"><li>Imagenes de 300x299.98px</li></ul><ul id="4f1c9b42-2f7a-4bf4-a95c-b0b854e3d4d5" class="bulleted-list"><li>Tipografías que al cambiar el tamaño de la hoja de trabajo quedaron en 11.93px</li></ul><ul id="485b6478-2816-48ad-9be0-00f9994dabae" class="bulleted-list"><li>Botones que quedaron en 80x30.1px</li></ul><p id="3c44059d-a14d-4c93-b97d-57547890e35c" class="">Quedará revisar (en base a las posibles correcciones en los átomos) las moléculas y los organismos y asegurarse que la distribución entre ellos queden prolijos, correctos, lógicamente armónicos y dentro de la grilla.</p><h2 id="996b71f6-0789-4405-a6ab-d6d9474b657c" class="">P<strong>reparación de assets para desarrollo </strong><em><strong>[1 sprint]</strong></em></h2><p id="32d28893-ec98-4dbe-a836-839aaebb3ac5" class="">Finalizado el diseño, se prepararán los <em>assets</em> para derivarlos al equipo de desarrollo, quienes se encargaran de implementarlo. Dependiendo de la plataforma en la que se haya trabajado, podría utilizarse <a href="https://www.invisionapp.com/design-system-manager">Invision DSM</a> o <a href="http://zeroheight.com">ZeroHeight</a> para tener un MVP del sistema de diseño funcionando rápido y fácil.</p><figure id="8f659c17-7736-4d9b-ae1f-9ffdd13943ce" class="image"><a href="Galicia/dsm-gala.png"><img style="width:672px" src="Galicia/dsm-gala.png"/></a><figcaption>Utilidades y funciones de Invision DSM para lanzar el MVP del sistema de diseño</figcaption></figure><p id="9d188511-d59f-479a-98d9-e7fce8b144dd" class="">Mientras se termina el desarrollo de la plataforma web interna, se pueden usar las herramientas anteriormente mencionadas para que el equipo de producción pueda acceder a las últimas versiones de los <em>assets</em>.</p></li></ol><ol id="4909b3c5-faf6-4004-91e4-6ef41ccf31d9" class="numbered-list" start="3"><li><strong><mark class="highlight-orange">¿Qué roles consideras clave en el equipo del sistema de diseño?</mark></strong><p id="c5ec5554-d35b-41bf-9181-99fbed78c9d8" class="">En un caso ideal, el equipo de sistema de diseño debería estar compuesto por:</p><ul id="8a0f47cc-46e3-4a3e-924d-67914c8bfbc2" class="bulleted-list"><li><strong>Líder de proyecto</strong> → El que dirige la orquesta</li></ul><ul id="2453ec5e-b74f-4833-a867-1a070e2c7972" class="bulleted-list"><li><strong>Scrum Master</strong> → Encargado de los sprints</li></ul><ul id="c0260e6c-80d6-43ce-a22b-b65d69cb70ec" class="bulleted-list"><li><strong>Analista de Datos</strong> → OKR y KPI del sistema actual y opotunidades de mejora</li></ul><ul id="ac7bf1b3-7aa1-47b8-8e10-0bc88678ba7e" class="bulleted-list"><li><strong>Diseñador UX 100%</strong> → Analisis Holisticos, entrevistas, flujos</li></ul><ul id="0d048b5f-acfe-48e8-8a01-0c82d6947efa" class="bulleted-list"><li><strong>(2) Diseñadores UI/UX 70/30</strong> → Desarrollo de assets, prototipos e interactividad.</li></ul><ul id="8cf020e7-f161-4d59-a5fa-327e14d59f1f" class="bulleted-list"><li><strong>(2) Desarrolladores Frontend </strong>→ Desarrollo de la plataforma web interna</li></ul><ul id="24a6be4f-f8b9-40c1-9ef8-cb418b5b504a" class="bulleted-list"><li><strong>Desarrollador Backend</strong> → Bases de la plataforma y seguridad</li></ul></li></ol><ol id="a50592b0-a017-49af-9178-86a9e3cdcfcf" class="numbered-list" start="4"><li><strong><mark class="highlight-orange">¿Cómo te imaginas que sería la mejor dinámica de trabajo con las 10 células con diseñadores que hoy diseñan activamente?</mark></strong><p id="4684b938-4f54-49a8-ac9d-408705092043" class="">La mejor dinámica de trabajo considerando la magnitud de productos del banco y la cantidad de empleados trabajando en diferentes cosas me parece que sería el priorizar el desarrollo de la plataforma web interna que contendría todo el sistema de diseño, desde sus guías de estilo hasta los componentes (átomos - moléculas - organismos) y a su vez mantener este en mejora constante. Es indispensable que esta plataforma contenga documentación detallada y actualizada de los últimos releases.</p><blockquote id="b05a744e-63b6-4479-8042-c70682e4e96d" class="">Es de vital importancia la intercomunicación con producción</blockquote><p id="9451c0e3-3795-4472-bef3-b1e9b6010301" class="">Para esto pondría una reunión de los equipos encargados del diseño en producción al final de cada sprint, para poder corroborar con quienes utilizan los assets creados que el camino que estamos tomando sea el correcto, también así que evaluar posibles mejoras podrían surgir en base a la retroalimentación de estas reuniones.</p><p id="b951aa49-43ad-48e1-8abc-c947def74386" class="">
+</p></li></ol><h3 id="ab7817e2-4673-4a41-869c-1323152a1acb" class="block-color-orange"><strong>El entregable debe incluir:</strong></h3><ul id="ae175df8-3692-4fa6-be46-4ef05e87fd5d" class="bulleted-list"><li>Etapas de desarrollo de sistema de diseño ✓</li></ul><ul id="59817b1f-44d2-4f4b-83c2-8dcc056f10a3" class="bulleted-list"><li>Objetivos y actividades por etapa. ✓</li></ul><ul id="75ec33d5-759a-40aa-be28-218dced5e22b" class="bulleted-list"><li>Listado de roles. ✓</li></ul><ul id="5a4de051-3283-4aea-9ee0-3bdc9d470dee" class="bulleted-list"><li>Operación equipo y células para mantener sistema de diseño. ✓</li></ul><p id="4f2d6441-e848-47f7-a4d4-469084d89eeb" class="">
+</p></div></article></body></html>
